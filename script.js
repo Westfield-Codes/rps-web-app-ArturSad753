@@ -8,15 +8,7 @@ function getRounds(){
     setRounds(rounds);
 }
 
-function setRounds(rounds){
-    if (rounds % 2 == 0) {
-         alert("Must be odd");
-    }
-    else window.location.href = "chooser.html"
-}
 
-function cpuTurn(u){
-    let moves = ["r","p",'s'];
 /* Function getRounds
  * Checks if rounds are odd. If even, warning message. 
  * Otherwise, sets round to 1, stores rounds and round in localStorage and loads chooser.html. 
