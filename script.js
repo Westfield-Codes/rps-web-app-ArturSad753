@@ -18,7 +18,8 @@ function getRounds(){
  */
 function setRounds(rounds){
     if (rounds % 2 == 0) {
-        alert("must be odd");
+        //alert("must be odd");
+        document.getElementById("rounds").value = "odd numbers only";
     }
     else {
         localStorage.setItem("rounds",rounds);
@@ -66,7 +67,8 @@ function cpuTurn(u){
  */
 function findWinner(u,c){
     if (u == c){
-        alert("We both picked " + u);
+        //alert("We both picked " + u);
+        document.getElementById("result").innerHTML = "We both picked " + u;
     }
     else {
         let winner = " ";
@@ -77,7 +79,8 @@ function findWinner(u,c){
 
             }
         }
-        alert("You choose " + u + " and I choose " + c + " " + winner + " win!");
+        //alert("You choose " + u + " and I choose " + c + " " + winner + " win!");
+        document.getElementById("result").innerHTML = "You choose " + u + " and I choose " + c + " " + winner + " win!";
         let round = localStorage.getItem("round");
         round++;
         localStorage.setItem("round",round);
