@@ -17,11 +17,13 @@ function getRounds(){
  * @return = none
  */
 function setRounds(rounds){
-    if (rounds % 2 == 0) {
+    if (rounds % 2 == 0 || isNaN(rounds)) {
         //alert("must be odd");
         document.getElementById("rounds").value = "odd numbers only";
     }
     else {
+        let score = [0,0];
+        localStorage.setItem("score",JSON.stringify(score));
         localStorage.setItem("rounds",rounds);
         localStorage.setItem("round",1);
         window.location.href = "chooser.html";
@@ -35,6 +37,7 @@ function setRounds(rounds){
  * @return = none
  */
 function showRound(){
+    let score = JSON.parse(localStorage.getItem("score"));
     let round = localStorage.getItem("round");
     let rounds = localStorage.getItem("rounds");
     if (round > rounds) {
@@ -43,6 +46,9 @@ function showRound(){
     let statsBox = document.getElementById("statsBox");
     let message = "Round " + round + " of " + rounds;
     statsBox.innerHTML = message;
+    let scoreBox = document.getElementById("scoreBox");
+    scoreBox.innerHTML = score.toString();
+
 }
 
 /* Function cpuTurn
