@@ -22,6 +22,7 @@ function setRounds(rounds){
         document.getElementById("rounds").value = "odd numbers only";
     }
     else {
+
         let score = [0,0];
         localStorage.setItem("score",JSON.stringify(score));
         localStorage.setItem("rounds",rounds);
@@ -85,11 +86,15 @@ function findWinner(u,c){
 
             }
         }
+        //After you set the round, get the score array from local storage, JSON parsed
+        let score = JSON.parse(localStorage.getItem("score"));
+        let players = ["you","I"];
         //alert("You choose " + u + " and I choose " + c + " " + winner + " win!");
         document.getElementById("result").innerHTML = "You choose " + u + " and I choose " + c + " " + winner + " win!";
         let round = localStorage.getItem("round");
         round++;
         localStorage.setItem("round",round);
+        localStorage.setItem("winner",winner);
         showRound();
     }
 }
