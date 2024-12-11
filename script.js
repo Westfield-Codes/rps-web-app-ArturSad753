@@ -89,14 +89,12 @@ function findWinner(u,c){
         let players = ["You","I"];
         let win = players.indexOf(winner);
         score[win]++;
-        //Next, display the updated score in the scoreBox div with "Score : " + score.toString;
-        console.log("Score : " + score.toString());
-        document.getElementById("scoreBox").innerHTML = "Score : " + score.toString();
         document.getElementById("result").innerHTML = "You choose " + u + " and I choose " + c + " " + winner + " win!";
         let round = localStorage.getItem("round");
         round++;
         localStorage.setItem("round",round);
         localStorage.setItem("winner",winner);
+        localStorage.setItem("score", JSON.stringify(score));
         showRound();
     }
 }
