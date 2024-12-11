@@ -74,22 +74,24 @@ function cpuTurn(u){
  */
 function findWinner(u,c){
     if (u == c){
-        //alert("We both picked " + u);
         document.getElementById("result").innerHTML = "We both picked " + u;
     }
     else {
         let winner = " ";
-        let winArray=[["r","p","I"],["r","s","you"],["p","s","I"],["p","r","you"],["s","r","I"],["s","p","you"]];
+        let winArray=[["r","p","I"],["r","s","You"],["p","s","I"],["p","r","You"],["s","r","I"],["s","p","You"]];
         for (let i = 0; i< winArray.length; i++){
             if (winArray[i][0] == u && winArray[i][1]==c){
                 winner= winArray[i][2];
 
             }
         }
-        //After you set the round, get the score array from local storage, JSON parsed
         let score = JSON.parse(localStorage.getItem("score"));
-        let players = ["you","I"];
-        //alert("You choose " + u + " and I choose " + c + " " + winner + " win!");
+        let players = ["You","I"];
+        let win = players.indexOf(winner);
+        score[win]++;
+        //Next, display the updated score in the scoreBox div with "Score : " + score.toString;
+        console.log("Score : " + score.toString());
+        document.getElementById("scoreBox").innerHTML = "Score : " + score.toString();
         document.getElementById("result").innerHTML = "You choose " + u + " and I choose " + c + " " + winner + " win!";
         let round = localStorage.getItem("round");
         round++;
