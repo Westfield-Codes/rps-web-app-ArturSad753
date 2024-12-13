@@ -89,7 +89,7 @@ function findWinner(u,c){
         let players = ["You","I"];
         let win = players.indexOf(winner);
         score[win]++;
-        if (score[win] > rounds/2)     window.location.href = "gameover.html";
+        // if (score[win] > rounds/2)     window.location.href = "gameover.html";
 
         document.getElementById("result").innerHTML = "You choose " + u + " and I choose " + c + " " + winner + " win!";
         let round = localStorage.getItem("round");
