@@ -30,9 +30,9 @@
 1. **done** endgame(): Create a variable called message, and begin it winner + " won,"
 1. **done** endgame(): Add the score to message, but array.join the values with " to " instead of a comma. 
 1. **done** endgame(): Display the message, something like "You won, 2 to 1" in scoreBox. 
-1. CodeSpace: If all this is working, save the branch now. 
-1. CodeSpace: Create a new branch called rps web-refactored. 
-1. script.js: Go over all the code.  If you see any repeated lines, make new a function for those if possible.  
-1. findWinner(): If one player wins more than half the rounds, end the game (shift to gameover.html).
+1. **done** CodeSpace: If all this is working, save the branch now. 
+1. **done** CodeSpace: Create a new branch called rps web-refactored. 
+1. **done** script.js: Go over all the code.  If you see any repeated lines, make new a function for those if possible.  
+1. **done** findWinner(): If one player wins more than half the rounds, end the game (shift to gameover.html).
 1. CodeSpace: When you are sure it works, pull request this branch to main, then merge it.  
 1. HTML + CSS: Style your pages to match your wireframes. 
