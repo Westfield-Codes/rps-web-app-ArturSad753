@@ -98,3 +98,14 @@ function findWinner(u,c){
         showRound();
     }
 }
+function endGame(){
+    let score = JSON.parse(localStorage.getItem("score"));
+    let winner = "You";
+    if(score[0] < score[1]) winner = "I";
+    let message = winner + " won, ";
+    message += score.join(" to ");
+    document.getElementById("scoreBox").innerHTML = message;
+}
+function playAgain(){
+    window.location.href = "index.html";
+}

@@ -18,18 +18,18 @@
 1. **done** findWinner(): create a players array with the two players, "You" first. This should match the values in winArray. 
 1. **done** findWinner(): set win equal to the index of the winner in players[]. So if winner is "I", it is players[1] so win = 1. 
 1. **done** findWinner(): increase by one the value of the element in the score array with index win
-1. findWinner(): display the updated score in the scoreBox div with "Score : " + score.toString;
-1. findWinner(): store the score array, stringified, in local storage.
-1. gameover.html: add the scorebox div above the play again button
-1. gameover.html: Give scoreBox div the class "over" 
-1. style.css Style class over (.over) with font-size:24pt, margin:auto, position:static!important, width:10em, text-align:center.
-1. gameover.html: load a new function called endGame() when the <body> loads (like you did in chooser.html)
-1. script.js: create a new function called endGame(){}
-1. endgame(): Get the score array from local storage, JSON.parsed
-1. endgame(): Decide who won based on the scores, and set winner equal to this value ("You" or "I")
-1. endgame(): Create a variable called message, and begin it winner + " won,"
-1. endgame(): Add the score to message, but array.join the values with " to " instead of a comma. 
-1. endgame(): Display the message, something like "You won, 2 to 1" in scoreBox. 
+1. **done** findWinner(): display the updated score in the scoreBox div with "Score : " + score.toString;
+1. **done** findWinner(): store the score array, stringified, in local storage.
+1. **done** gameover.html: add the scorebox div above the play again button
+1. **done** gameover.html: Give scoreBox div the class "over" 
+1. **done** style.css Style class over (.over) with font-size:24pt, margin:auto, position:static!important, width:10em, text-align:center.
+1. **done** gameover.html: load a new function called endGame() when the <body> loads (like you did in chooser.html)
+1. **done** script.js: create a new function called endGame(){}
+1. **done** endgame(): Get the score array from local storage, JSON.parsed
+1. **done** endgame(): Decide who won based on the scores, and set winner equal to this value ("You" or "I")
+1. **done** endgame(): Create a variable called message, and begin it winner + " won,"
+1. **done** endgame(): Add the score to message, but array.join the values with " to " instead of a comma. 
+1. **done** endgame(): Display the message, something like "You won, 2 to 1" in scoreBox. 
 1. CodeSpace: If all this is working, save the branch now. 
 1. CodeSpace: Create a new branch called rps web-refactored. 
 1. script.js: Go over all the code.  If you see any repeated lines, make new a function for those if possible.  
